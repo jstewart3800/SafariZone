@@ -1,5 +1,10 @@
 .headerStyle{
       background-color: #cc1316;
+      padding-top: 1rem;
+}
+
+.headerButts{
+      display: flex;
 }
 
 .searchButt{
@@ -8,5 +13,33 @@
       border-radius: 100%;
       height: 3rem;
       width: 3rem;
+      margin-right: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+}
+
+.miniButt{
+      border: 1px solid black;
+      border-radius: 100%;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 6px;
+      margin-left: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.logButt{
+      background-color: #9c2532;
+}
+
+.accountButt{
+      background-color: yellow;
+}
+
+.settingsButt{
+      background-color: green;
 }
