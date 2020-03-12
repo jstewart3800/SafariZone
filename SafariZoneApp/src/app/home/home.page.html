@@ -1,11 +1,13 @@
+<ion-content [fullscreen]="false">
+     <app-header></app-header>
+     <ion-grid class="slantTest">
+          <ion-row>
+               <ion-col>
+               </ion-col>
+          </ion-row>
+     </ion-grid>
+     <ion-content>
+          <ion-router-outlet></ion-router-outlet> <!-- Needs to populate into the white space below header -->
 
-<ion-content [fullscreen]="true">
-      <app-header></app-header>
-      <ion-grid class="slantTest">
-            <ion-row>
-                  <ion-col>
-
-                  </ion-col>
-            </ion-row>
-      </ion-grid>
+     </ion-content>
 </ion-content>
