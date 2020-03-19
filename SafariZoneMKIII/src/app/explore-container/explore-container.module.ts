@@ -6,10 +6,11 @@ import { IonicModule } from '@ionic/angular';
 
 import { ExploreContainerComponent } from './explore-container.component';
 import { WildPokemonComponent } from '../components/wild-pokemon/wild-pokemon.component';
+import { LogComponent } from '../components/log/log.component';
 
 @NgModule({
   imports: [ CommonModule, FormsModule, IonicModule],
-  declarations: [ExploreContainerComponent, WildPokemonComponent],
+  declarations: [ExploreContainerComponent, WildPokemonComponent, LogComponent],
   exports: [ExploreContainerComponent]
 })
 export class ExploreContainerComponentModule {}

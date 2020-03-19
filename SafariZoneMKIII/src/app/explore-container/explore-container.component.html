@@ -1,17 +1,15 @@
 <div id="container">
+    <ion-grid>
+        <div *ngIf="name === 'Tab 1 page'">
+            <app-wild-pokemon></app-wild-pokemon>
+        </div>
 
-     <div *ngIf="name === 'Tab 1 page'">
-          
-          <app-wild-pokemon></app-wild-pokemon>
+        <div *ngIf="name === 'Tab 2 page'">
+            <app-log></app-log>
+        </div>
 
-     </div>
-
-     <div *ngIf="name === 'Tab 2 page'">
-          <p>big ol stinkus2</p>
-     </div>
-
-     <div *ngIf="name === 'Tab 3 page'">
-          <p>big ol stinkus3</p>
-     </div>
-
+        <div *ngIf="name === 'Tab 3 page'">
+            <p>big ol stinkus3</p>
+        </div>
+    </ion-grid>
 </div>
