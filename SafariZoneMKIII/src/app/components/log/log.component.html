@@ -1,7 +1,7 @@
-<ion-row>
+<ion-row class="mt-5">
    <ion-col>
       <ion-list>
-         <ion-item>
+         <!-- <ion-item>
             <p slot="start">001</p>
             <ion-label>Bulbasaur</ion-label>
          </ion-item>
@@ -27,9 +27,15 @@
                Charizard
             </ion-label>
             <ion-thumbnail slot="end">
-               <img src="assets/icon/Nidoran♀Icon.png">
+               <img src="assets/icon/NidoranFIcon.png">
             </ion-thumbnail>
+         </ion-item> -->
+
+         <ion-item *ngFor="let p of this.pokedexEntryList">
+            <p slot="start">{{this.pokedexEntryList.dexNum}}</p>
+            <ion-label>{{this.pokedexEntryList.pokemon}}</ion-label>
          </ion-item>
+
       </ion-list>
    </ion-col>
 </ion-row>
