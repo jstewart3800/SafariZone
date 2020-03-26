@@ -10,9 +10,11 @@ export class PokedexService {
 
    private pokeDataSheet;
 
-   public pokedexEntryList: PokedexEntry[] = [];
+   private pokedexEntryList: PokedexEntry[] = [];
 
-   constructor(private http: HttpClient) { }
+   constructor(private http: HttpClient) {
+      this.getPokemon();
+   }
 
    getPokemon() {
       this.pokeDataSheet = this.http.get(this.pokemonUrl);
@@ -45,5 +47,9 @@ export class PokedexService {
             console.log(this.pokedexEntryList);
          }
       )
+   }
+
+   returnPokemon() {
+      return this.pokedexEntryList;
    }
 }

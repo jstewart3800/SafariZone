@@ -1,4 +1,4 @@
-<ion-row class="mt-5">
+<ion-row class="my-5">
    <ion-col>
       <ion-list>
          <!-- <ion-item>
@@ -31,9 +31,12 @@
             </ion-thumbnail>
          </ion-item> -->
 
-         <ion-item *ngFor="let p of this.pokedexEntryList">
-            <p slot="start">{{this.pokedexEntryList.dexNum}}</p>
-            <ion-label>{{this.pokedexEntryList.pokemon}}</ion-label>
+         <ion-item *ngFor="let p of logList">
+            <p slot="start">{{p.dexNum}}</p>
+            <ion-label>{{p.pokemon}}</ion-label>
+            <ion-thumbnail slot="end">
+               <img src="assets/icon/{{p.pokemon}}Icon.png">
+            </ion-thumbnail>
          </ion-item>
 
       </ion-list>

@@ -9,10 +9,11 @@ import { PokedexEntry } from 'src/app/interfaces/pokedex-entry';
 })
 export class LogComponent implements OnInit {
 
-   private pokedexEntryList: PokedexEntry[] = this.pokedex.pokedexEntryList;
+   private logList;
 
    constructor(private pokedex: PokedexService) {
-      pokedex.getPokemon();
+      this.logList = pokedex.returnPokemon();
+      console.log(this.logList);
    }
 
    ngOnInit() { }
