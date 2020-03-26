@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
-     <div id="container">
-          <ion-grid class="px-0">
-               <!-- <ion-row>
+   <div id="container">
+      <ion-grid class="px-0">
+         <!-- <ion-row>
                     <ion-col>
                          <h1>
                               Steps until next Pokemon:
@@ -11,9 +11,24 @@
                          </div>
                     </ion-col>
                </ion-row> -->
-               <!-- <div> -->
-                    <app-wild-pokemon></app-wild-pokemon>
-               <!-- </div> -->
-          </ion-grid>
-     </div>
+         <!-- <div> -->
+         <!-- <app-wild-pokemon></app-wild-pokemon> -->
+         <!-- </div> -->
+
+         <ion-row>
+            <ion-col>
+               <ion-list>
+                  <ion-item *ngFor="let p of logList" (click)='presentModal()'>
+                     <p slot="start" class='mb-0'>{{p.dexNum}}</p>
+                     <ion-label>{{p.pokemon}}</ion-label>
+                     <!-- <ion-thumbnail slot="end">
+                        <img src="assets/icon/{{p.pokemon}}Icon.png">
+                     </ion-thumbnail> -->
+                  </ion-item>
+               </ion-list>
+            </ion-col>
+         </ion-row>
+
+      </ion-grid>
+   </div>
 </ion-content>
