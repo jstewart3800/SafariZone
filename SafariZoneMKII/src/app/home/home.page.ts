@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+
 import { PokedexService } from '../services/pokedex.service';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../pages/modal/modal.page';
+import { ModalComponent } from './modal/modal.component';
+import { PokedexEntry } from '../interfaces/pokedex-entry';
 
 @Component({
    selector: 'app-home',
@@ -10,17 +12,21 @@ import { ModalPage } from '../pages/modal/modal.page';
 })
 export class HomePage {
 
-   private logList;
+   private logList: PokedexEntry[];
 
    constructor(private pokedex: PokedexService, public modalController: ModalController) {
       this.logList = pokedex.returnPokemon();
       console.log(this.logList);
    }
 
-   async presentModal() {
+   async presentModal(pokeSelected: PokedexEntry) {
+      console.log(pokeSelected);
       const modal = await this.modalController.create({
-         component: ModalPage
+         component: ModalComponent,
+         componentProps: { // an object where each key in the object maps to an input of an associated component
+            pokeData: pokeSelected.gender
+         }
       });
-      return await modal.present();
+      await modal.present();
    }
 }

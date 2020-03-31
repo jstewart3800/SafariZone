@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ModalModule } from './modal/modal.module';
 
 import { HomePage } from './home.page';
 import { WildPokemonComponent } from '../components/wild-pokemon/wild-pokemon.component';
@@ -12,6 +13,7 @@ import { WildPokemonComponent } from '../components/wild-pokemon/wild-pokemon.co
     CommonModule,
     FormsModule,
     IonicModule,
+    ModalModule,
     RouterModule.forChild([
       {
         path: '',

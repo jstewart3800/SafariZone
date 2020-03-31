@@ -1,7 +1,7 @@
 <ion-row>
    <ion-col>
       <ion-list>
-         <ion-item *ngFor="let p of logList">
+         <ion-item *ngFor="let p of logList" (click) = "presentModal(p)">
             <p slot="start" class='mb-0'>{{p.dexNum}}</p>
             <ion-label>{{p.pokemon}}</ion-label>
             <ion-thumbnail slot="end">
