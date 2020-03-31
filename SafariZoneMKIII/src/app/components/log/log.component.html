@@ -1,13 +1,24 @@
 <ion-row>
    <ion-col>
       <ion-list>
-         <ion-item *ngFor="let p of logList" (click) = "presentModal(p)">
-            <p slot="start" class='mb-0'>{{p.dexNum}}</p>
-            <ion-label>{{p.pokemon}}</ion-label>
-            <ion-thumbnail slot="end">
-               <img src="assets/icon/{{p.pokemon}}Icon.png">
-            </ion-thumbnail>
-         </ion-item>
+         <div *ngFor="let p of logList">
+            <ion-item *ngIf="p.discovered === 'f'; else pokeKnown">
+               <p slot="start" class='mb-0'>???</p>
+               <ion-label>???</ion-label>
+               <ion-thumbnail slot="end">
+                  <img src="assets/icon/mysteryIcon.png">
+               </ion-thumbnail>
+            </ion-item>
+            <ng-template #pokeKnown>
+               <ion-item (click)="presentModal(p)">
+                  <p slot="start" class='mb-0'>{{p.dexNum}}</p>
+                  <ion-label>{{p.pokemon}}</ion-label>
+                  <ion-thumbnail slot="end">
+                     <img src="assets/icon/{{p.pokemon}}Icon.png">
+                  </ion-thumbnail>
+               </ion-item>
+            </ng-template>
+         </div>
       </ion-list>
    </ion-col>
 </ion-row>
