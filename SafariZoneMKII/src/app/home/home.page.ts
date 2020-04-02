@@ -24,7 +24,7 @@ export class HomePage {
       const modal = await this.modalController.create({
          component: ModalComponent,
          componentProps: { // an object where each key in the object maps to an input of an associated component
-            pokeData: pokeSelected.gender
+            pokeData: pokeSelected.dexNum
          }
       });
       await modal.present();

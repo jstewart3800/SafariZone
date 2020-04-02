@@ -1,7 +1,16 @@
 <div>
    <ion-grid>
       <div *ngIf="name === 'Tab 1 page'">
-         <app-wild-pokemon></app-wild-pokemon>
+         <div *ngIf="stepTest === true; else home">
+            <app-wild-pokemon></app-wild-pokemon>
+         </div>
+         <ng-template #home>
+            <ion-row>
+               <ion-col>
+                  <ion-button color="danger">WildPokemon</ion-button>
+               </ion-col>
+            </ion-row>
+         </ng-template>
       </div>
 
       <div *ngIf="name === 'Tab 2 page'">

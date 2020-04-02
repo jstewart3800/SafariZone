@@ -1,46 +1,46 @@
 <ion-row>
-     <ion-col class="pb-0 pt-3">
-          <img class="ion-float-right spriteStyle" src="assets/wildSprites/025.png" alt="Bulbasaur">
-     </ion-col>
+   <ion-col class="pb-0 ">
+      <img class="ion-float-right spriteStyle" src="assets/wildSprites/025.png" alt="Pikachu"> <!-- Still runs too quickly -->
+   </ion-col>
 </ion-row>
 <ion-row>
-     <ion-col class="p-0">
-          <img class="ion-float-left spriteStyle" src="assets/trainerBack.png" alt="Trainer">
-     </ion-col>
+   <ion-col class="p-0">
+      <img class="ion-float-left spriteStyle" src="assets/trainerBack.png" alt="Trainer">
+   </ion-col>
 </ion-row>
 <ion-row>
-     <ion-col class="p-0">
-          <ion-grid class="p-0">
-               <ion-row class="battleBox">
-                    <ion-col>
-                         <div>
-                              <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
-                                   Ball
-                                   <ion-ripple-effect></ion-ripple-effect>
-                              </ion-button>
-                         </div>
-                         <div>
-                              <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
-                                   Bait
-                                   <ion-ripple-effect></ion-ripple-effect>
-                              </ion-button>
-                         </div>
-                    </ion-col>
-                    <ion-col>
-                         <div>
-                              <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
-                                   Rock
-                                   <ion-ripple-effect></ion-ripple-effect>
-                              </ion-button>
-                         </div>
-                         <div>
-                              <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
-                                   Run
-                                   <ion-ripple-effect></ion-ripple-effect>
-                              </ion-button>
-                         </div>
-                    </ion-col>
-               </ion-row>
-          </ion-grid>
-     </ion-col>
+   <ion-col class="p-0">
+      <ion-grid class="p-0">
+         <ion-row class="battleBox">
+            <ion-col>
+               <div>
+                  <ion-button (click)='rollWildPokemon()' color="warning" expand="block" class="ion-activatable ripple-parent"> <!-- Set to roll random pokemon -->
+                     Ball
+                     <ion-ripple-effect></ion-ripple-effect>
+                  </ion-button>
+               </div>
+               <div>
+                  <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
+                     Bait
+                     <ion-ripple-effect></ion-ripple-effect>
+                  </ion-button>
+               </div>
+            </ion-col>
+            <ion-col>
+               <div>
+                  <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
+                     Rock
+                     <ion-ripple-effect></ion-ripple-effect>
+                  </ion-button>
+               </div>
+               <div>
+                  <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
+                     Run
+                     <ion-ripple-effect></ion-ripple-effect>
+                  </ion-button>
+               </div>
+            </ion-col>
+         </ion-row>
+      </ion-grid>
+   </ion-col>
 </ion-row>

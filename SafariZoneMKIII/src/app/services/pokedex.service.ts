@@ -20,7 +20,7 @@ export class PokedexService {
       this.pokeDataSheet = this.http.get(this.pokemonUrl);
       this.pokeDataSheet.subscribe(
          x => {
-            console.log(x);
+            // console.log(x);
             for (let p of x.feed.entry) {
                let nextPokemon: PokedexEntry = {
                   dexNum: p.gsx$dexnum.$t,
@@ -52,4 +52,6 @@ export class PokedexService {
    returnPokemon() {
       return this.pokedexEntryList;
    }
+
+
 }

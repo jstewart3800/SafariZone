@@ -33,7 +33,7 @@
    right: 0;
    top: 50%;
    transform: translateY(-50%);
- }
+}
 
 .headerStyle{ 
      background-color: #cc1316;
@@ -82,3 +82,10 @@
 .settingsButt{
      background-color: green;
 }
+
+.centerContent{
+   display: flex;
+   justify-content: center;
+}
+
+

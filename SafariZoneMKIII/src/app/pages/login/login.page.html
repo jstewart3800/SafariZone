@@ -1,19 +1,37 @@
 <ion-header [translucent]="true">
    <ion-grid class="headerStyle">
-        <ion-row>
-             <ion-col class="headerButts">
-                  <div class="searchButt"></div>
-                  <div class="miniButt logButt whiteText"></div>
-                  <div class="miniButt accountButt"></div>
-                  <div class="miniButt settingsButt whiteText"></div>
-             </ion-col>
-             <ion-col size="4"></ion-col>
-        </ion-row>
+      <ion-row>
+         <ion-col class="headerButts">
+            <div class="searchButt"></div>
+            <div class="miniButt logButt whiteText"></div>
+            <div class="miniButt accountButt"></div>
+            <div class="miniButt settingsButt whiteText"></div>
+         </ion-col>
+         <ion-col size="4"></ion-col>
+      </ion-row>
    </ion-grid>
 </ion-header>
 
-<ion-content>
+<ion-content class="dexCover"> <!-- style like pokedex cover -->
+   <p>Welcome to the Safari Zone!</p>
    <ion-grid class="centerStage">
+      <ion-row>
+         <ion-col>
+            <ion-item>
+               <ion-label position="floating">Email Address:</ion-label>
+               <ion-input placeholder="BigProf@kantonet.com"></ion-input>
+            </ion-item>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col>
+            <ion-item>
+               <ion-label position="floating">Password:</ion-label>
+               <ion-input type="password" placeholder="DeliaKetchum"></ion-input>
+            </ion-item>
+         </ion-col>
+      </ion-row>
+
       <ion-row>
          <ion-col>
             <ion-button routerLink='/tabs'>Login</ion-button>

@@ -26,7 +26,23 @@ export class LogComponent implements OnInit {
       const modal = await this.modalCtrl.create({
          component: ModalComponent,
          componentProps: { // an object where each key in the object maps to an input of an associated component
-            pokeData: pokeSelected.gender
+            entryNum: pokeSelected.dexNum,
+            entryName: pokeSelected.pokemon,
+            entryHp: pokeSelected.hp,
+            entryAtk: pokeSelected.atk,
+            entryDef: pokeSelected.def,
+            entrySpecAtk: pokeSelected.satk,
+            entrySpecDef: pokeSelected.sdef,
+            entrySpd: pokeSelected.spd,
+            entryType: pokeSelected.type,
+            entryAbility1: pokeSelected.ability1,
+            entryAbility2: pokeSelected.ability2,
+            entryEVWorth: pokeSelected.EVWorth,
+            entryGender: pokeSelected.gender,
+            entryEvolvesFrom: pokeSelected.evolvesFrom,
+            entryEvolvesBy: pokeSelected.evolvesBy,
+            entryEvolvesTo: pokeSelected.evolvesTo,
+            entryDesc: pokeSelected.description,
          }
       });
       await modal.present();
