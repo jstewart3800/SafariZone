@@ -1,30 +1,138 @@
 <ion-header [translucent]="true">
    <ion-grid class="headerStyle">
-        <ion-row>
-             <ion-col class="headerButts">
-                  <div class="searchButt" (click)="close()">
-                     <ion-icon name="close-sharp"></ion-icon>
-                  </div>
-                  <div class="miniButt logButt whiteText"></div>
-                  <div class="miniButt accountButt"></div>
-                  <div class="miniButt settingsButt whiteText"></div>
-             </ion-col>
-             <ion-col size="4"></ion-col>
-        </ion-row>
+      <ion-row>
+         <ion-col class="headerButts">
+            <div class="searchButt" (click)="close()">
+               <ion-icon name="close-sharp"></ion-icon>
+            </div>
+            <div class="miniButt logButt whiteText"></div>
+            <div class="miniButt accountButt"></div>
+            <div class="miniButt settingsButt whiteText"></div>
+         </ion-col>
+         <ion-col size="4"></ion-col>
+      </ion-row>
    </ion-grid>
 </ion-header>
 
-<!-- <ion-grid>
-   <ion-row>
-      <ion-col class="centerContent">
-         <img class="dexSprite" src="assets/wildSprites/{{entryNum}}.png" alt="{{entryName}}">
-      </ion-col>
-   </ion-row>
-   <hr>
-   <ion-row>
-      <ion-col>
-         <p>asdjbinjweifhbwdicwiehfb vkajsbdwnrubisjdxncoaehf</p>
-      </ion-col>
-   </ion-row>
-</ion-grid> -->
+<div class="ion-text-center">
 
+   <ion-card>
+      <ion-grid>
+
+         <ion-row>
+            <ion-col>
+               <div>
+                  <img class="dexSprite" src="assets/wildSprites/{{entryNum}}.png" alt="{{entryName}}">
+               </div>
+               <ion-card-header class="p-0">
+                  <ion-card-title>{{entryName}}</ion-card-title>
+                  <ion-card-subtitle class="blackText">#{{entryNum}}</ion-card-subtitle>
+               </ion-card-header>
+            </ion-col>
+         </ion-row>
+
+         <hr>
+
+         <ion-row>
+            <ion-col>
+               <ion-card-subtitle class="mb-2 blackText underline">
+                  Base Stats:
+               </ion-card-subtitle>
+            </ion-col>
+         </ion-row>
+
+         <ion-row class="blackText">
+            <ion-col class="statBox" id="hpBox">
+               <p>
+                  Hp
+                  <br>
+                  {{entryHp}}
+               </p>
+            </ion-col>
+            <ion-col class="statBox" id="atkBox">
+               <p>
+                  Atk
+                  <br>
+                  {{entryAtk}}
+               </p>
+            </ion-col>
+            <ion-col class="statBox" id="defBox">
+               <p>
+                  Def
+                  <br>
+                  {{entryDef}}
+               </p>
+            </ion-col>
+            <ion-col class="statBox" id="sAtkBox">
+               <p>
+                  SAtk
+                  <br>
+                  {{entrySpecAtk}}
+               </p>
+            </ion-col>
+            <ion-col class="statBox" id="sDefBox">
+               <p>
+                  SDef
+                  <br>
+                  {{entrySpecDef}}
+               </p>
+            </ion-col>
+            <ion-col class="statBox" id="spdBox">
+               <p>
+                  Spd
+                  <br>
+                  {{entrySpd}}
+               </p>
+            </ion-col>
+         </ion-row>
+
+         <hr>
+
+         <ion-row>
+            <ion-col>
+               <ion-card-subtitle class="blackText underline">
+                  Type:
+               </ion-card-subtitle>
+            </ion-col>
+         </ion-row>
+
+         <ion-row>
+            <ion-col>
+               <p class="m-0">
+                  {{entryType}}
+               </p>
+            </ion-col>
+         </ion-row>
+
+         <hr>
+
+         <ion-row>
+            <ion-col>
+               <ion-card-subtitle class="blackText underline">
+                  Abilites:
+               </ion-card-subtitle>
+            </ion-col>
+         </ion-row>
+
+         <ion-row>
+            <ion-col>
+               <p>
+                  {{entryAbility1}}
+               </p>
+            </ion-col>
+
+            <ion-col *ngIf="entryAbility2 !== ''">
+               <p>
+                  {{entryAbility2}}
+               </p>
+            </ion-col>
+         </ion-row>
+
+         <!-- Add EV and evolution sections -->
+
+         <ion-card-content>
+            {{entryDesc}}
+         </ion-card-content>
+      </ion-grid>
+   </ion-card>
+</div>

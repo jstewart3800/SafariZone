@@ -8,3 +8,40 @@ hr{
    width: 100%;
 }
 
+.cardStyle{
+   color: black;
+}
+
+.statBox{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   border-radius: 8px;
+
+   height: 48px;
+}
+
+#hpBox{
+   background-color: #ff5959;
+}
+
+#atkBox{
+   background-color: #f5ac78;
+}
+
+#defBox{
+   background-color: #fae078;
+}
+
+#sAtkBox{
+   background-color: #9db7f5;
+}
+
+#sDefBox{
+   background-color: #a7db8d;
+}
+
+#spdBox{
+   background-color: #fa92b2;
+}
