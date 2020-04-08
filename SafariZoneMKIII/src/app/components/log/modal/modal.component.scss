@@ -1,15 +1,23 @@
 .dexSprite{
    width: 8rem;
    height: auto;
-   
+}
+
+p{
+   margin: 0px;
 }
 
 hr{
+   margin-top: 8px;
+   margin-bottom: 8px;
+
    width: 100%;
 }
 
-.cardStyle{
-   color: black;
+.modalStyle{
+   background-color: #9cd7c8;
+
+   overflow-y: auto;
 }
 
 .statBox{
@@ -44,4 +52,8 @@ hr{
 
 #spdBox{
    background-color: #fa92b2;
+}
+
+.typeGenderBox{
+   border-right: rgb(232,232,232) solid thin;
 }
