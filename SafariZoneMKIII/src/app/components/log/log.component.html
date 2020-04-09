@@ -2,7 +2,7 @@
    <ion-col>
       <ion-list>
          <div *ngFor="let p of logList">
-            <ion-item *ngIf="p.discovered === 't'; else pokeKnown">
+            <ion-item *ngIf="p.discovered === 'f'; else pokeKnown">
                <p slot="start" class='mb-0'>???</p>
                <ion-label>???</ion-label>
                <ion-thumbnail slot="end">

@@ -16,7 +16,7 @@
 
 <div class="ion-text-center modalStyle">
 
-   <ion-card >
+   <ion-card>
       <ion-grid>
 
          <ion-row>
@@ -38,187 +38,194 @@
                <ion-col>
                   <ion-card-subtitle class="mb-2 blackText underline">
                      Base Stats:
-               </ion-card-subtitle>
-            </ion-col>
-         </ion-row>
-         
-         <ion-row class="blackText">
-            <ion-col class="statBox" id="hpBox">
-               <p>
-                  Hp
-                  <br>
-                  {{entryHp}}
-               </p>
-            </ion-col>
-            <ion-col class="statBox" id="atkBox">
-               <p>
-                  Atk
-                  <br>
-                  {{entryAtk}}
-               </p>
-            </ion-col>
-            <ion-col class="statBox" id="defBox">
-               <p>
-                  Def
-                  <br>
-                  {{entryDef}}
-               </p>
-            </ion-col>
-            <ion-col class="statBox" id="sAtkBox">
-               <p>
-                  SAtk
-                  <br>
-                  {{entrySpecAtk}}
-               </p>
-            </ion-col>
-            <ion-col class="statBox" id="sDefBox">
-               <p>
-                  SDef
-                  <br>
-                  {{entrySpecDef}}
-               </p>
-            </ion-col>
-            <ion-col class="statBox" id="spdBox">
-               <p>
-                  Spd
-                  <br>
-                  {{entrySpd}}
-               </p>
-            </ion-col>
-         </ion-row>
-         
-         <hr>
-         
-         <ion-row>
-            <ion-col class="typeGenderBox">
-               <ion-card-subtitle class="blackText underline">
-                  Type:
-               </ion-card-subtitle>
-               <p class="blackText">
-                  {{entryType}}
-               </p>
-            </ion-col>
-            
-            <ion-col>
-               <ion-card-subtitle class="blackText underline">
-                  Gender %:
-               </ion-card-subtitle>
-               <p class="blackText">
-                  {{entryGender}}
-               </p>
-            </ion-col>
-         </ion-row>
-         
-         <hr> <!-- Sometimes doesn't populate correctly ??? -->
-         
-         <ion-row>
-            <ion-col>
-               <ion-card-subtitle class="blackText underline">
-                  Abilites:
-               </ion-card-subtitle>
-            </ion-col>
-         </ion-row>
-         
-         <ion-row>
-            <ion-col>
-               <p class="blackText">
-                  {{entryAbility1}}
-               </p>
-            </ion-col>
-            
-            <ion-col *ngIf="entryAbility2 !== ''">
-               <p class="blackText">
-                  {{entryAbility2}}
-               </p>
-            </ion-col>
-         </ion-row>
-         
-         <hr>
-         
-         <ion-row>
-            <ion-col>
-               <ion-card-subtitle class="blackText underline">
-                  Effort Value Yields:
-               </ion-card-subtitle>
-            </ion-col>
-         </ion-row>
-         
-         <ion-row>
-            <ion-col>
-               <p class="blackText">
-                  {{entryEVWorth}}
-               </p>
-            </ion-col>
-         </ion-row>
-         
-         <hr>
-         
-         <ion-row>
-            <ion-col>
-               <ion-card-subtitle class="blackText underline">
-                  Evolution:
-               </ion-card-subtitle>
-            </ion-col>
-         </ion-row>
-         
-         <ion-row>
-            <!-- From -->
-            <ion-col class="blackText">
-               <p *ngIf="entryEvolvesFrom !== '--'; else noFrom">
-                  From:
-                  <br>
-                  <img src="assets/icon/{{entryEvolvesFrom}}Icon.png" alt="{{entryEvolvesFrom}}">
-               </p>
-               <ng-template #noFrom>
+                  </ion-card-subtitle>
+               </ion-col>
+            </ion-row>
+
+            <ion-row class="blackText">
+               <ion-col class="statBox" id="hpBox">
                   <p>
+                     Hp
+                     <br>
+                     {{entryHp}}
+                  </p>
+               </ion-col>
+               <ion-col class="statBox" id="atkBox">
+                  <p>
+                     Atk
+                     <br>
+                     {{entryAtk}}
+                  </p>
+               </ion-col>
+               <ion-col class="statBox" id="defBox">
+                  <p>
+                     Def
+                     <br>
+                     {{entryDef}}
+                  </p>
+               </ion-col>
+               <ion-col class="statBox" id="sAtkBox">
+                  <p>
+                     SAtk
+                     <br>
+                     {{entrySpecAtk}}
+                  </p>
+               </ion-col>
+               <ion-col class="statBox" id="sDefBox">
+                  <p>
+                     SDef
+                     <br>
+                     {{entrySpecDef}}
+                  </p>
+               </ion-col>
+               <ion-col class="statBox" id="spdBox">
+                  <p>
+                     Spd
+                     <br>
+                     {{entrySpd}}
+                  </p>
+               </ion-col>
+            </ion-row>
+
+            <hr>
+
+            <ion-row>
+               <ion-col class="typeGenderBox">
+                  <ion-card-subtitle class="blackText underline">
+                     Type:
+                  </ion-card-subtitle>
+                  <p class="blackText">
+                     {{entryType}}
+                  </p>
+               </ion-col>
+
+               <ion-col>
+                  <ion-card-subtitle class="blackText underline">
+                     Gender %:
+                  </ion-card-subtitle>
+                  <p class="blackText">
+                     {{entryGender}}
+                  </p>
+               </ion-col>
+            </ion-row>
+
+            <hr> <!-- Sometimes doesn't populate correctly ??? -->
+
+            <ion-row>
+               <ion-col>
+                  <ion-card-subtitle class="blackText underline">
+                     Abilites:
+                  </ion-card-subtitle>
+               </ion-col>
+            </ion-row>
+
+            <ion-row>
+               <ion-col>
+                  <p class="blackText">
+                     {{entryAbility1}}
+                  </p>
+               </ion-col>
+
+               <ion-col *ngIf="entryAbility2 !== ''">
+                  <p class="blackText">
+                     {{entryAbility2}}
+                  </p>
+               </ion-col>
+            </ion-row>
+
+            <hr>
+
+            <ion-row>
+               <ion-col>
+                  <ion-card-subtitle class="blackText underline">
+                     Effort Value Yields:
+                  </ion-card-subtitle>
+               </ion-col>
+            </ion-row>
+
+            <ion-row>
+               <ion-col>
+                  <p class="blackText">
+                     {{entryEVWorth}}
+                  </p>
+               </ion-col>
+            </ion-row>
+
+            <hr>
+
+            <ion-row>
+               <ion-col>
+                  <ion-card-subtitle class="blackText underline">
+                     Evolution:
+                  </ion-card-subtitle>
+               </ion-col>
+            </ion-row>
+
+            <ion-row>
+               <!-- From -->
+               <ion-col class="blackText">
+                  <p *ngIf="entryEvolvesFrom !== '--'; else noFrom">
                      From:
                      <br>
-                     None
+                     <img src="assets/icon/{{entryEvolvesFrom}}Icon.png" alt="{{entryEvolvesFrom}}">
                   </p>
-               </ng-template>
-            </ion-col>
-            <!-- By -->
-            <ion-col class="blackText">
-               <p *ngIf="entryEvolvesBy !== '--'; else noBy">
-                  By:
-                  <br>
-                  {{entryEvolvesBy}}
-               </p>
-               <ng-template #noBy>
-                  <p>
+                  <ng-template #noFrom>
+                     <p>
+                        From:
+                        <br>
+                        None
+                     </p>
+                  </ng-template>
+               </ion-col>
+               <!-- By -->
+               <ion-col class="blackText">
+                  <p *ngIf="entryEvolvesBy !== '--'; else noBy">
                      By:
                      <br>
-                     N/A
+                     {{entryEvolvesBy}}
                   </p>
-               </ng-template>
-            </ion-col>
-            <!-- To -->
-            <ion-col class="blackText">
-               <p *ngIf="entryEvolvesTo !== '--'; else noTo">
-                  To:
-                  <br>
-                  <img src="assets/icon/{{entryEvolvesTo}}Icon.png" alt="{{entryEvolvesTo}}">
-               </p>
-               <ng-template #noTo>
-                  <p>
+                  <ng-template #noBy>
+                     <p>
+                        By:
+                        <br>
+                        N/A
+                     </p>
+                  </ng-template>
+               </ion-col>
+               <!-- To -->
+               <ion-col class="blackText">
+                  <p *ngIf="entryEvolvesTo === 'Varies by stone'; else notEevee">
                      To:
                      <br>
-                     None
+                     Varies by stone used
                   </p>
-               </ng-template>
-            </ion-col>
-         </ion-row>
-         
-         <hr>
-         
-         <ion-row>
-            <ion-col>
-               <p class="blackText">
-                  {{entryDesc}}
-               </p>
-            </ion-col>
-         </ion-row>
-      </div>
+                  <ng-template #notEevee>
+                     <p *ngIf="entryEvolvesTo !== '--'; else noTo">
+                        To:
+                        <br>
+                        <img src="assets/icon/{{entryEvolvesTo}}Icon.png" alt="{{entryEvolvesTo}}">
+                     </p>
+                  </ng-template>
+                  <ng-template #noTo>
+                     <p>
+                        To:
+                        <br>
+                        None
+                     </p>
+                  </ng-template>
+               </ion-col>
+            </ion-row>
+
+            <hr>
+
+            <ion-row>
+               <ion-col>
+                  <p class="blackText">
+                     {{entryDesc}}
+                  </p>
+               </ion-col>
+            </ion-row>
+         </div>
       </ion-grid>
    </ion-card>
 </div>
