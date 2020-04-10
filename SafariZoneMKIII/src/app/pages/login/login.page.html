@@ -12,30 +12,37 @@
    </ion-grid>
 </ion-header>
 
-<ion-content class="dexCover"> <!-- style like pokedex cover -->
-   <p>Welcome to the Safari Zone!</p>
-   <ion-grid class="centerStage">
+<ion-content class="dexCover">
+   <ion-grid>
       <ion-row>
-         <ion-col>
-            <ion-item>
-               <ion-label position="floating">Email Address:</ion-label>
-               <ion-input placeholder="BigProf@kantonet.com"></ion-input>
-            </ion-item>
+         <ion-col class="ion-text-center">
+            <h3 class="pokemonSolid" id="titleCard">Welcome to the Safari Zone!</h3>
          </ion-col>
       </ion-row>
-      <ion-row>
-         <ion-col>
-            <ion-item>
-               <ion-label position="floating">Password:</ion-label>
-               <ion-input type="password" placeholder="DeliaKetchum"></ion-input>
-            </ion-item>
-         </ion-col>
-      </ion-row>
+      <div class="centerStage loginBox">
+         <ion-row>
+            <ion-col>
+               <ion-item class="inputs">
+                  <ion-label position="floating">Email Address:</ion-label>
+                  <ion-input placeholder="BigProf@kantonet.com"></ion-input>
+               </ion-item>
+            </ion-col>
+         </ion-row>
+         <ion-row>
+            <ion-col>
+               <ion-item class="inputs">
+                  <ion-label position="floating">Password:</ion-label>
+                  <ion-input type="password" placeholder="DeliaKetchum"></ion-input> 
+               </ion-item>
+               <p class="whiteText">New to Safari Zone? <a href="" class="goldText">Sign Up!</a></p>
+            </ion-col>
+         </ion-row>
 
-      <ion-row>
-         <ion-col>
-            <ion-button routerLink='/tabs'>Login</ion-button>
-         </ion-col>
-      </ion-row>
+         <ion-row>
+            <ion-col>
+               <ion-button color='warning' routerLink='/tabs'>Login</ion-button>
+            </ion-col>
+         </ion-row>
+      </div>   
    </ion-grid>
 </ion-content>

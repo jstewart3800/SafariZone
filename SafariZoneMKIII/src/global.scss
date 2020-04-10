@@ -25,20 +25,30 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@font-face{
+   font-family: pokemonSolid;
+   src: url(assets/font/PokemonSolid.ttf);
+}
+
+.pokemonSolid{
+   font-family: pokemonSolid;
+}
+
 .centerStage {
    text-align: center;
  
    position: absolute;
    left: 0;
    right: 0;
-   top: 50%;
+   top: 55%;
    transform: translateY(-50%);
 }
 
 .headerStyle{ 
-     background-color: #cc1316;
-     padding-top: 1rem;
-     border-bottom: 5px solid maroon;
+   background-color: red;
+   padding-top: 1rem;
+   border-bottom: 5px solid;
+   border-bottom-color: maroon;
 }
 
 .headerButts{
@@ -56,8 +66,8 @@
      display: flex;
      justify-content: center;
      align-items: center;
-
-}
+     
+   }
 
 .miniButt{
      border: 1px solid black;
@@ -92,8 +102,17 @@
    color: black;
 }
 
+.whiteText{
+   color: white;
+}
+
+.goldText{
+   color: #ffcc01;
+}
+
 .underline{
    text-decoration: underline;
 }
+
 
 

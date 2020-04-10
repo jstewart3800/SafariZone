@@ -1,13 +1,34 @@
-#container {
-   text-align: center;
- 
-   position: absolute;
-   left: 0;
-   right: 0;
-   top: 50%;
-   transform: translateY(-50%);
+#titleCard{
+   color: #ffcc01;
+   text-shadow: -1px -1px 0 #385ca8, 1px -1px 0 #385ca8, -1px 1px 0 #385ca8, 1px 1px 0 #385ca8;
 }
 
 .dexCover{
    // Style like the cover of the pokedex
+   --background: red;
+   border-top: 5px solid maroon;
+   // border-top-color: maroon, red;
+
+}
+
+.inputs{
+   --background: red;
+   --border-color: white;
+
+   --padding-start: 10px;
+   --padding-end: 10px;
+
+   color: white;
+   font-size: larger;
+
+}
+
+.loginBox{
+   // border-top: 5px solid maroon;
+   // border-bottom: 5px solid maroon;
+   border: 5px double maroon;
+}
+
+p{
+   margin: 0px;
 }
