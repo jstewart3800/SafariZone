@@ -14,6 +14,7 @@ namespace SafariAPI.Models
       public UserInfo() {} // 1st Constructor is kept empty
       public UserInfo(int id, string email, string pw){ 
          // Automatically fits new objects into UserInfo model if they have the right kind of data when constructor is called
+         this.id = id;
          this.emailAddress = email;
          this.password = pw;
       }

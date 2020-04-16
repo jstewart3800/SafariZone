@@ -7,8 +7,8 @@ namespace SafariAPI.Services
    {
       public List<UserInfo> fixedData = new List<UserInfo>
       {
-         new UserInfo(1,"JonStewart@example.example", "password"), 
-         new UserInfo(2,"bigstinkus@stink.stank", "trash")
+         new UserInfo(-3,"JonStewart@example.example", "password"), 
+         new UserInfo(-4,"bigstinkus@stink.stank", "trash")
       };
 
       public IEnumerable<UserInfo> GetUsers()
