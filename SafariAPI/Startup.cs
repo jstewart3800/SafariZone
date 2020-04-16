@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SafariAPI.Services;
 
 namespace SafariAPI
 {
@@ -26,6 +27,16 @@ namespace SafariAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            services.AddScoped<LoginService>(); 
+
+            services.AddCors(options => {
+                              options.AddPolicy("CorsPolicy",
+                              builder => builder.WithOrigins("http://localhost:4200")
+                                          .AllowAnyHeader()
+                                          .AllowAnyMethod()
+                                          .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +50,7 @@ namespace SafariAPI
             // app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
