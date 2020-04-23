@@ -12,19 +12,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [
-     BrowserModule, 
-     IonicModule.forRoot(), 
-     AppRoutingModule, 
-     HttpClientModule,
+   declarations: [AppComponent],
+   entryComponents: [],
+   imports: [
+      BrowserModule,
+      IonicModule.forRoot(),
+      AppRoutingModule,
+      HttpClientModule,
       ReactiveFormsModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-  ],
-  bootstrap: [AppComponent]
+   providers: [
+      StatusBar,
+      SplashScreen,
+      { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+   ],
+   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
