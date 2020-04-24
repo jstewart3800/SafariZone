@@ -26,10 +26,10 @@ export class LoginPage implements OnInit {
 
       this.submitAttempt = true;
 
-      if (!this.loginForm.valid) {
-         console.log('invalid login');
+      if (!this.loginForm.valid) { // check db to see if login is valid
+         alert('invalid login'); // Toast
       } else {
-         console.log('success!');
+         console.log('success!'); // user is now logged in
          console.log(this.loginForm.value);
       }
    }

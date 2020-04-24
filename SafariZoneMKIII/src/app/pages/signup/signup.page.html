@@ -20,34 +20,41 @@
          </ion-col>
       </ion-row>
       <div class="centerStage loginBox">
-         <ion-row>
-            <ion-col>
+         <!-- <ion-row> -->
+         <!-- <ion-col> -->
+
+         <ion-list lines="none" class="p-0">
+            <form [formGroup]="signupForm">
+
+
                <ion-item class="inputs">
                   <ion-label position="floating">Email Address:</ion-label>
-                  <ion-input placeholder="BigProf@kantonet.com"></ion-input>
+                  <ion-input formControlName="email" type="text" placeholder="BigProf@Pallettown.com"></ion-input>
                </ion-item>
-            </ion-col>
-         </ion-row>
-         <ion-row>
-            <ion-col>
+               <!-- </ion-col> -->
+               <!-- </ion-row> -->
+               <!-- <ion-row> -->
+               <!-- <ion-col> -->
                <ion-item class="inputs">
                   <ion-label position="floating">Password:</ion-label>
-                  <ion-input type="password" placeholder="DeliaKetchum"></ion-input>
+                  <ion-input #password formControlName="password" type="password" placeholder="DeliaKetchum"></ion-input>
                </ion-item>
-            </ion-col>
-         </ion-row>
-         <ion-row>
-            <ion-col>
+               <!-- </ion-col> -->
+               <!-- </ion-row> -->
+               <!-- <ion-row> -->
+               <!-- <ion-col> -->
                <ion-item class="inputs">
                   <ion-label position="floating">Confirm Password:</ion-label>
-                  <ion-input type="password" placeholder="DeliaKetchum"></ion-input>
+                  <ion-input #confirm formControlName="confirm" type="password" placeholder="DeliaKetchum"></ion-input>
                </ion-item>
-            </ion-col>
-         </ion-row>
+            </form>
+         </ion-list>
+         <!-- </ion-col> -->
+         <!-- </ion-row> -->
 
          <ion-row>
             <ion-col>
-               <ion-button color='warning' routerLink=''>Create Account</ion-button>
+               <ion-button (click)="signupAttempt(password.value, confirm.value)" color='warning' routerLink=''>Create Account</ion-button>
             </ion-col>
          </ion-row>
       </div>
