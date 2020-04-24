@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PokedexEntry } from '../interfaces/pokedex-entry';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
    providedIn: 'root'
 })
 export class PokedexService {
    private pokemonUrl = 'https://spreadsheets.google.com/feeds/list/1cMgd1ABRtTlwTstgGwEf563_ZTfZhLBCPJqvpl0ysTY/1/public/full?alt=json';
+
+   public apiUrl = environment.api;
 
    private pokeDataSheet;
 
@@ -52,6 +55,4 @@ export class PokedexService {
    returnPokemon() {
       return this.pokedexEntryList;
    }
-
-
 }
