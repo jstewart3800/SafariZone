@@ -14,6 +14,8 @@ namespace SafariAPI.Services
          _context = context;
       }
 
+      // --------------------------Login----------------- //
+
       // C - Create
       public int InsertUser(UserInfo user)
       {
@@ -59,5 +61,23 @@ namespace SafariAPI.Services
          _context.Remove(user);
          return _context.SaveChanges() !=0;
       }
+
+      // ----------------------------- PokeLogs ------------------//
+
+      // C - Create
+      public int CreatePokeLog(PokemonCaught newLog)
+      {
+         var logItem = _context.Add(newLog);
+         _context.SaveChanges();
+         return logItem.Entity.id;
+      }
+      // R - Read
+      public IEnumerable<PokemonCaught> GetPokeLogs()
+      {
+         return _context.PokeLogsSql;
+      }
+      // U - Update
+
+      // D - Delete
    }
 }
