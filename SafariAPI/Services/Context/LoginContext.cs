@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; //Hey dingus! Start on the APItoSQL Morning Part 1 lecture 
 using SafariAPI.Models;
 
 namespace SafariAPI.Services.Context
@@ -24,7 +24,7 @@ namespace SafariAPI.Services.Context
             new UserInfo(1,"JonStewart@example.example", "password"),
             new UserInfo(2,"bigstinkus@stink.stank", "trash")
          };
-         // This line gives the db some seed data
+         // This line gives the DB some seed data. Otherwise, DB starts empty
          builder.Entity<UserInfo>().HasData(fixedData); // Needed for every model created
       }
    }

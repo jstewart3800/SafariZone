@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -23,7 +24,7 @@ namespace SafariAPI.Controllers
          _logger = logger;
       }
 
-      [HttpGet]
+      [HttpGet, Authorize]
       public IEnumerable<WeatherForecast> Get()
       {
          var rng = new Random();
