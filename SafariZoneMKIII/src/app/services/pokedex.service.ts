@@ -2,20 +2,33 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PokedexEntry } from '../interfaces/pokedex-entry';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
+import { UserEmail } from '../interfaces/user-email';
 
 @Injectable({
    providedIn: 'root'
 })
 export class PokedexService {
+
+   public loggedInUser: UserEmail = {
+      id: 0,
+      userEmail: ""
+   };
+
    private pokemonUrl = 'https://spreadsheets.google.com/feeds/list/1cMgd1ABRtTlwTstgGwEf563_ZTfZhLBCPJqvpl0ysTY/1/public/full?alt=json';
 
    public apiUrl = environment.api;
+   public createUserUrl = this.apiUrl + "loginsql"
+   public createLogUrl = this.apiUrl + "pokemoncaught"
+   public tokenUrl = this.apiUrl + "auth/login"
+
+   public token;
 
    private pokeDataSheet;
 
    private pokedexEntryList: PokedexEntry[] = [];
 
-   constructor(private http: HttpClient) {
+   constructor(private http: HttpClient, private router: Router) {
       this.getPokemon();
    }
 
@@ -55,4 +68,33 @@ export class PokedexService {
    returnPokemon() {
       return this.pokedexEntryList;
    }
+
+   login(credentials) {
+      this.http.post(this.tokenUrl, credentials).subscribe(t => {
+         this.token = t;
+         this.token = this.token.token;
+         localStorage.setItem('JWT', this.token);
+         this.router.navigate(['tabs']);
+         console.log(this.token);
+      })
+   }
+
+   signUp(credentials) {
+      this.http.post(this.createUserUrl, credentials).subscribe( u => {
+         this.token = u;
+         this.token = this.token.token;
+         console.log(this.token);
+      })
+   }
+
+   signUp2(credentials) {
+      this.http.post(this.createLogUrl, credentials).subscribe( u => {
+         this.token = u;
+         this.token = this.token.token;
+         this.router.navigate(['']);
+         console.log(this.token);
+      })
+   }
+
+   
 }

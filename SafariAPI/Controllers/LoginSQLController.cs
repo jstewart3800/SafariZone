@@ -16,39 +16,6 @@ namespace SafariAPI.Controllers
 
    public class LoginSQLController : ControllerBase
    {
-      // GET api/values
-      [HttpPost, Route("login")]
-      public IActionResult UserInfo([FromBody]UserInfo user)
-      {
-         if (user == null)
-         {
-            return BadRequest("Invalid client request");
-         }
-         if (user.emailAddress == "bigstinkus@stink.stank" && user.password == "trash")
-         {
-            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
-            var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256); // = secret key + "hash"
-            var tokeOptions = new JwtSecurityToken(
-                issuer: "http://localhost:5000",
-                audience: "http://localhost:5000",
-                claims: new List<Claim>(),
-                expires: DateTime.Now.AddMinutes(5),
-                signingCredentials: signinCredentials
-            );
-            var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
-            return Ok(new { Token = tokenString });
-         }
-         else
-         {
-            return Unauthorized();
-         }
-      }
-
-
-      //----------------------------------------------------------------------------//
-
-
-
 
       readonly LoginServiceSQL _UsersFromSQL;
 

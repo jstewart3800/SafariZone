@@ -47,5 +47,4 @@ export class LogComponent implements OnInit {
       });
       await modal.present();
    }
-
 }

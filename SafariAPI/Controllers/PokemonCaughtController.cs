@@ -23,10 +23,22 @@ namespace SafariAPI.Controllers
          return _PokeLogsFromSQL.GetPokeLogs();
       }
 
+      [HttpGet("{userEmail}")]
+      public PokemonCaught GetLogByEmail(string userEmail)
+      {
+         return _PokeLogsFromSQL.GetLogByEmail(userEmail);
+      }
+
       [HttpPost]
       public int CreatePokeLog(PokemonCaught logToCreate)
       {
          return _PokeLogsFromSQL.CreatePokeLog(logToCreate);
       }
+
+      [HttpDelete("{id}")]
+        public bool DeleteLog(int id)
+        {
+            return _PokeLogsFromSQL.DeleteLog(id);
+        }
    }
 }

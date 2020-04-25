@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SafariAPI.Models;
-using SafariAPI.Services.Context; 
+using SafariAPI.Services.Context;
 
 namespace SafariAPI.Services
 {
@@ -29,7 +29,7 @@ namespace SafariAPI.Services
          return userItem.Entity.id;
       }
 
-   //-----------------------------------------------------------//
+      //-----------------------------------------------------------//
 
       // R - Read
       public IEnumerable<UserInfo> GetUsers()
@@ -42,24 +42,24 @@ namespace SafariAPI.Services
          return _context.UserInfoSql.SingleOrDefault(x => x.id == id);
       }
 
-   //-----------------------------------------------------------//
+      //-----------------------------------------------------------//
 
       // U - Update
       public bool UpdateUser(UserInfo user)
       {
          _context.Update<UserInfo>(user);
          // WARNING: If id is 0 this will update all fields
-         return _context.SaveChanges() !=0;
+         return _context.SaveChanges() != 0;
       }
 
-   //----------------------------------------------------------//   
+      //----------------------------------------------------------//   
 
       // D - Delete
       public bool DeleteUserById(int id)
       {
          var user = GetUserById(id);
          _context.Remove(user);
-         return _context.SaveChanges() !=0;
+         return _context.SaveChanges() != 0;
       }
 
       // ----------------------------- PokeLogs ------------------//
@@ -76,8 +76,22 @@ namespace SafariAPI.Services
       {
          return _context.PokeLogsSql;
       }
+      public PokemonCaught GetLogByEmail(string userEmail)
+      {
+         return _context.PokeLogsSql.SingleOrDefault(x => x.userEmail == userEmail);
+      }
+      public PokemonCaught GetLogById(int id)
+      {
+         return _context.PokeLogsSql.SingleOrDefault(x => x.id == id);
+      }
       // U - Update
 
       // D - Delete
+      public bool DeleteLog(int id)
+      {
+         var log = GetLogById(id);
+         _context.Remove(log);
+         return _context.SaveChanges() != 0;
+      }
    }
 }

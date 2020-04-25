@@ -20,20 +20,14 @@
          </ion-col>
       </ion-row>
       <div class="centerStage loginBox">
-         <!-- <ion-row> -->
-         <!-- <ion-col> -->
          <ion-list lines="none" class="p-0">
 
             <form [formGroup]="loginForm">
 
                <ion-item class="inputs">
                   <ion-label position="floating">Email Address:</ion-label>
-                  <ion-input formControlName="email" type="text" placeholder="BigProf@Pallettown.com"></ion-input>
+                  <ion-input #id formControlName="emailAddress" type="text" placeholder="BigProf@Pallettown.com"></ion-input>
                </ion-item>
-               <!-- </ion-col> -->
-               <!-- </ion-row> -->
-               <!-- <ion-row> -->
-               <!-- <ion-col> -->
                <ion-item class="inputs">
                   <ion-label position="floating">Password:</ion-label>
                   <ion-input formControlName="password" type="password" placeholder="DeliaKetchum"></ion-input>
@@ -42,12 +36,10 @@
          </ion-list>
          <p class="whiteText">New to Safari Zone? <a routerLink='/signup' class="goldText">Sign Up!</a></p>
          <!-- Need to figure out routing, or lack thereof -->
-         <!-- </ion-col> -->
-         <!-- </ion-row> -->
 
          <ion-row>
             <ion-col>
-               <ion-button (click)="loginAttempt()" color='warning'>Login</ion-button> <!-- routerLink='/tabs' -->
+               <ion-button (click)="loginAttempt(id.value)" color='warning'>Login</ion-button> <!-- Add spinner while pulling token -->
             </ion-col>
          </ion-row>
       </div>
