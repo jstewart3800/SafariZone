@@ -4,6 +4,8 @@ import { PokedexService } from 'src/app/services/pokedex.service';
 import { PokedexEntry } from 'src/app/interfaces/pokedex-entry';
 import { ModalController } from '@ionic/angular';
 import { ModalComponent } from './modal/modal.component';
+import { HttpClient } from '@angular/common/http';
+import { CaughtLog } from 'src/app/interfaces/caught-log';
 
 @Component({
    selector: 'app-log',
@@ -12,14 +14,20 @@ import { ModalComponent } from './modal/modal.component';
 })
 export class LogComponent implements OnInit {
 
+   private userCaughtList;
+
    private logList: PokedexEntry[];
 
-   constructor(private pokedex: PokedexService, public modalCtrl: ModalController) {
+   public loggedInUserUrl = this.pokedex.apiUrl + `pokemoncaught/${this.pokedex.loggedInUser.userEmail}`;
+
+   constructor(private pokedex: PokedexService, public modalCtrl: ModalController, private http: HttpClient) {
       this.logList = pokedex.returnPokemon();
       console.log(this.logList);
    }
 
-   ngOnInit() { }
+   ngOnInit() {
+      this.GetUserLog();
+   }
 
    async presentModal(pokeSelected: PokedexEntry) {
       console.log(pokeSelected);
@@ -47,4 +55,15 @@ export class LogComponent implements OnInit {
       });
       await modal.present();
    }
+
+   GetUserLog() {
+      this.http.get(this.loggedInUserUrl).subscribe(l => {
+         console.log(this.loggedInUserUrl);
+         console.log(l);
+         this.userCaughtList = l;
+         console.log(this.userCaughtList);
+      })
+   }
+
+
 }
