@@ -106,7 +106,7 @@ export class SignupPage implements OnInit {
             Machamp: false,
             Bellsprout: false,
             Weepinbell: false,
-            Victreebell: false,
+            Victreebel: false,
             Tentacool: false,
             Tentacruel: false,
             Geodude: false,

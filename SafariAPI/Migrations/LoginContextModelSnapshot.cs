@@ -445,7 +445,7 @@ namespace SafariAPI.Migrations
                     b.Property<bool>("Venusaur")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("Victreebell")
+                    b.Property<bool>("Victreebel")
                         .HasColumnType("bit");
 
                     b.Property<bool>("Vileplume")
@@ -629,7 +629,7 @@ namespace SafariAPI.Migrations
                             Venomoth = false,
                             Venonat = false,
                             Venusaur = false,
-                            Victreebell = false,
+                            Victreebel = false,
                             Vileplume = false,
                             Voltorb = false,
                             Vulpix = false,
@@ -785,7 +785,7 @@ namespace SafariAPI.Migrations
                             Venomoth = false,
                             Venonat = false,
                             Venusaur = false,
-                            Victreebell = false,
+                            Victreebel = false,
                             Vileplume = false,
                             Voltorb = false,
                             Vulpix = false,

@@ -80,7 +80,7 @@ namespace SafariAPI.Models
       public bool Machamp { get; set; }
       public bool Bellsprout { get; set; }
       public bool Weepinbell { get; set; }
-      public bool Victreebell { get; set; }
+      public bool Victreebel { get; set; }
       public bool Tentacool { get; set; }
       public bool Tentacruel { get; set; }
       public bool Geodude { get; set; }
@@ -162,7 +162,7 @@ namespace SafariAPI.Models
       public bool Mewtwo { get; set; }
       public bool Mew { get; set; }
       public PokemonCaught() { }
-      public PokemonCaught(int id, string userEmail, bool Bulbasaur, bool Ivysaur, bool Venusaur, bool Charmander, bool Charmeleon, bool Charizard, bool Squirtle, bool Wartortle, bool Blastoise, bool Caterpie, bool Metapod, bool Butterfree, bool Weedle, bool Kakuna, bool Beedrill, bool Pidgey, bool Pidgeotto, bool Pidgeot, bool Rattata, bool Raticate, bool Spearow, bool Fearow, bool Ekans, bool Arbok, bool Pikachu, bool Raichu, bool Sandshrew, bool Sandslash, bool NidoranF, bool Nidorina, bool Nidoqueen, bool NidoranM, bool Nidorino, bool Nidoking, bool Clefairy, bool Clefable, bool Vulpix, bool Ninetales, bool Jigglypuff, bool Wigglytuff, bool Zubat, bool Golbat, bool Oddish, bool Gloom, bool Vileplume, bool Paras, bool Parasect, bool Venonat, bool Venomoth, bool Diglett, bool Dugtrio, bool Meowth, bool Persian, bool Psyduck, bool Golduck, bool Mankey, bool Primeape, bool Growlithe, bool Arcanine, bool Poliwag, bool Poliwhirl, bool Poliwrath, bool Abra, bool Kadabra, bool Alakazam, bool Machop, bool Machoke, bool Machamp, bool Bellsprout, bool Weepinbell, bool Victreebell, bool Tentacool, bool Tentacruel, bool Geodude, bool Graveler, bool Golem, bool Ponyta, bool Rapidash, bool Slowpoke, bool Slowbro, bool Magnemite, bool Magneton, bool Farfetchd, bool Doduo, bool Dodrio, bool Seel, bool Dewgong, bool Grimer, bool Muk, bool Shellder, bool Cloyster, bool Gastly, bool Haunter, bool Gengar, bool Onix, bool Drowzee, bool Hypno, bool Krabby, bool Kingler, bool Voltorb, bool Electrode, bool Exeggcute, bool Exeggutor, bool Cubone, bool Marowak, bool Hitmonlee, bool Hitmonchan, bool Lickitung, bool Koffing, bool Weezing, bool Rhyhorn, bool Rhydon, bool Chansey, bool Tangela, bool Kangaskhan, bool Horsea, bool Seadra, bool Goldeen, bool Seaking, bool Staryu, bool Starmie, bool MrMime, bool Scyther, bool Jynx, bool Electabuzz, bool Magmar, bool Pinsir, bool Tauros, bool Magikarp, bool Gyarados, bool Lapras, bool Ditto, bool Eevee, bool Vaporeon, bool Jolteon, bool Flareon, bool Porygon, bool Omanyte, bool Omastar, bool Kabuto, bool Kabutops, bool Aerodactyl, bool Snorlax, bool Articuno, bool Zapdos, bool Moltres, bool Dratini, bool Dragonair, bool Dragonite, bool Mewtwo, bool Mew)
+      public PokemonCaught(int id, string userEmail, bool Bulbasaur, bool Ivysaur, bool Venusaur, bool Charmander, bool Charmeleon, bool Charizard, bool Squirtle, bool Wartortle, bool Blastoise, bool Caterpie, bool Metapod, bool Butterfree, bool Weedle, bool Kakuna, bool Beedrill, bool Pidgey, bool Pidgeotto, bool Pidgeot, bool Rattata, bool Raticate, bool Spearow, bool Fearow, bool Ekans, bool Arbok, bool Pikachu, bool Raichu, bool Sandshrew, bool Sandslash, bool NidoranF, bool Nidorina, bool Nidoqueen, bool NidoranM, bool Nidorino, bool Nidoking, bool Clefairy, bool Clefable, bool Vulpix, bool Ninetales, bool Jigglypuff, bool Wigglytuff, bool Zubat, bool Golbat, bool Oddish, bool Gloom, bool Vileplume, bool Paras, bool Parasect, bool Venonat, bool Venomoth, bool Diglett, bool Dugtrio, bool Meowth, bool Persian, bool Psyduck, bool Golduck, bool Mankey, bool Primeape, bool Growlithe, bool Arcanine, bool Poliwag, bool Poliwhirl, bool Poliwrath, bool Abra, bool Kadabra, bool Alakazam, bool Machop, bool Machoke, bool Machamp, bool Bellsprout, bool Weepinbell, bool Victreebel, bool Tentacool, bool Tentacruel, bool Geodude, bool Graveler, bool Golem, bool Ponyta, bool Rapidash, bool Slowpoke, bool Slowbro, bool Magnemite, bool Magneton, bool Farfetchd, bool Doduo, bool Dodrio, bool Seel, bool Dewgong, bool Grimer, bool Muk, bool Shellder, bool Cloyster, bool Gastly, bool Haunter, bool Gengar, bool Onix, bool Drowzee, bool Hypno, bool Krabby, bool Kingler, bool Voltorb, bool Electrode, bool Exeggcute, bool Exeggutor, bool Cubone, bool Marowak, bool Hitmonlee, bool Hitmonchan, bool Lickitung, bool Koffing, bool Weezing, bool Rhyhorn, bool Rhydon, bool Chansey, bool Tangela, bool Kangaskhan, bool Horsea, bool Seadra, bool Goldeen, bool Seaking, bool Staryu, bool Starmie, bool MrMime, bool Scyther, bool Jynx, bool Electabuzz, bool Magmar, bool Pinsir, bool Tauros, bool Magikarp, bool Gyarados, bool Lapras, bool Ditto, bool Eevee, bool Vaporeon, bool Jolteon, bool Flareon, bool Porygon, bool Omanyte, bool Omastar, bool Kabuto, bool Kabutops, bool Aerodactyl, bool Snorlax, bool Articuno, bool Zapdos, bool Moltres, bool Dratini, bool Dragonair, bool Dragonite, bool Mewtwo, bool Mew)
       {
          this.id = id;
          this.userEmail = userEmail;
@@ -236,7 +236,7 @@ namespace SafariAPI.Models
          this.Machamp = Machamp;
          this.Bellsprout = Bellsprout;
          this.Weepinbell = Weepinbell;
-         this.Victreebell = Victreebell;
+         this.Victreebel = Victreebel;
          this.Tentacool = Tentacool;
          this.Tentacruel = Tentacruel;
          this.Geodude = Geodude;

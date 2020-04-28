@@ -10,6 +10,8 @@ import { UserEmail } from '../interfaces/user-email';
 })
 export class PokedexService {
 
+   public userCaughtObj = {};
+
    public loggedInUser: UserEmail = {
       id: 0,
       userEmail: ""
@@ -80,7 +82,7 @@ export class PokedexService {
    }
 
    signUp(credentials) {
-      this.http.post(this.createUserUrl, credentials).subscribe( u => {
+      this.http.post(this.createUserUrl, credentials).subscribe(u => {
          this.token = u;
          this.token = this.token.token;
          console.log(this.token);
@@ -88,13 +90,11 @@ export class PokedexService {
    }
 
    signUp2(credentials) {
-      this.http.post(this.createLogUrl, credentials).subscribe( u => {
+      this.http.post(this.createLogUrl, credentials).subscribe(u => {
          this.token = u;
          this.token = this.token.token;
          this.router.navigate(['']);
          console.log(this.token);
       })
    }
-
-   
 }

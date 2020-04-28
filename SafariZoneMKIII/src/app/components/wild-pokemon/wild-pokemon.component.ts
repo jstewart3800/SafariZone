@@ -11,22 +11,44 @@ export class WildPokemonComponent implements OnInit {
 
    private pokemonList: PokedexEntry[];
 
+   public wildAppeared = false;
+
    public wildPokemonId;
    public wildPokemon: PokedexEntry;
+
+   public
 
    constructor(private pokedex: PokedexService) {
       this.pokemonList = pokedex.returnPokemon();
       console.log(this.pokemonList);
    }
 
-   ngOnInit() {
-      // this.rollWildPokemon();
-   }
+   ngOnInit() {}
 
    rollWildPokemon() {
       this.wildPokemonId = Math.floor(Math.random() * 151) + 1;
       this.wildPokemon = this.pokemonList[this.wildPokemonId - 1]; // Runs too quickly to initialize with the page itself
       console.log(this.wildPokemon);
+      this.wildAppeared = true;
+      console.log(this.wildAppeared);
+   }
+
+   runAway() {
+      this.wildAppeared = false;
+   }
+
+   throwBait() {
+
+   }
+
+   throwRock() {
+
+   }
+
+   throwBall() {
+      // create logic to descern catch success/ fail
+      //success - call api function to update user's pokemonCaught
+      // fail - pokemon's turn
    }
 
 }

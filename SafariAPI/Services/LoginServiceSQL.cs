@@ -85,7 +85,12 @@ namespace SafariAPI.Services
          return _context.PokeLogsSql.SingleOrDefault(x => x.id == id);
       }
       // U - Update
-
+      public bool UpdateLog(PokemonCaught log)
+        {
+            _context.Update<PokemonCaught>(log);
+            //if you don't do a check for it being 0 , then it would update all the fields
+            return _context.SaveChanges() != 0;
+        }
       // D - Delete
       public bool DeleteLog(int id)
       {
