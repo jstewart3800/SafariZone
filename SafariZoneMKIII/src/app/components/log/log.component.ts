@@ -19,9 +19,11 @@ export class LogComponent implements OnInit {
    private discovered = false;
 
    private userCaughtList = [];
-   private userCaughtObj = {};
 
    private logList: PokedexEntry[];
+   // private logList2: PokedexEntry[];
+   // loglist = [];
+   // logList = logList2;
 
    public loggedInUserUrl = this.pokedex.apiUrl + `pokemoncaught/${this.pokedex.loggedInUser.userEmail}`;
 
@@ -79,613 +81,613 @@ export class LogComponent implements OnInit {
          //this.userCaughtList.push(l);
          console.log(pokeList.bulbasaur);
          let Bulbasaur = {
-            Bulbasaur: pokeList.bulbasaur
+            name: pokeList.bulbasaur
          }
          this.userCaughtList.push(Bulbasaur);
          const Ivysaur = {
-            Ivysaur: pokeList.ivysaur
+            name: pokeList.ivysaur
          }
          this.userCaughtList.push(Ivysaur);
          const Venusaur = {
-            Venusaur: pokeList.venusaur
+            name: pokeList.venusaur
          }
          this.userCaughtList.push(Venusaur);
          const Charmander = {
-            Charmander: pokeList.charmander
+            name: pokeList.charmander
          }
          this.userCaughtList.push(Charmander);
          const Charmeleon = {
-            Charmeleon: pokeList.charmeleon
+            name: pokeList.charmeleon
          }
          this.userCaughtList.push(Charmeleon);
          const Charizard = {
-            Charizard: pokeList.charizard
+            name: pokeList.charizard
          }
          this.userCaughtList.push(Charizard);
          const Squirtle = {
-            Squirtle: pokeList.squirtle
+            name: pokeList.squirtle
          }
          this.userCaughtList.push(Squirtle);
          const Wartortle = {
-            Wartortle: pokeList.wartortle
+            name: pokeList.wartortle
          }
          this.userCaughtList.push(Wartortle);
          const Blastoise = {
-            Blastoise: pokeList.blastoise
+            name: pokeList.blastoise
          }
          this.userCaughtList.push(Blastoise);
          const Caterpie = {
-            Caterpie: pokeList.caterpie
+            name: pokeList.caterpie
          }
          this.userCaughtList.push(Caterpie);
          const Metapod = {
-            Metapod: pokeList.metapod
+            name: pokeList.metapod
          }
          this.userCaughtList.push(Metapod);
          const Butterfree = {
-            Butterfree: pokeList.butterfree
+            name: pokeList.butterfree
          }
          this.userCaughtList.push(Butterfree);
          const Weedle = {
-            Weedle: pokeList.weedle
+            name: pokeList.weedle
          }
          this.userCaughtList.push(Weedle);
          const Kakuna = {
-            Kakuna: pokeList.kakuna
+            name: pokeList.kakuna
          }
          this.userCaughtList.push(Kakuna);
          const Beedrill = {
-            Beedrill: pokeList.beedrill
+            name: pokeList.beedrill
          }
          this.userCaughtList.push(Beedrill);
          const Pidgey = {
-            Pidgey: pokeList.pidgey
+            name: pokeList.pidgey
          }
          this.userCaughtList.push(Pidgey);
          const Pidgeotto = {
-            Pidgeotto: pokeList.pidgeotto
+            name: pokeList.pidgeotto
          }
          this.userCaughtList.push(Pidgeotto);
          const Pidgeot = {
-            Pidgeot: pokeList.pidgeot
+            name: pokeList.pidgeot
          }
          this.userCaughtList.push(Pidgeot);
          const Rattata = {
-            Rattata: pokeList.rattata
+            name: pokeList.rattata
          }
          this.userCaughtList.push(Rattata);
          const Raticate = {
-            Raticate: pokeList.raticate
+            name: pokeList.raticate
          }
          this.userCaughtList.push(Raticate);
          const Spearow = {
-            Spearow: pokeList.spearow
+            name: pokeList.spearow
          }
          this.userCaughtList.push(Spearow);
          const Fearow = {
-            Fearow: pokeList.fearow
+            name: pokeList.fearow
          }
          this.userCaughtList.push(Fearow);
          const Ekans = {
-            Ekans: pokeList.ekans
+            name: pokeList.ekans
          }
          this.userCaughtList.push(Ekans);
          const Arbok = {
-            Arbok: pokeList.arbok
+            name: pokeList.arbok
          }
          this.userCaughtList.push(Arbok);
          const Pikachu = {
-            Pikachu: pokeList.pikachu
+            name: pokeList.pikachu
          }
          this.userCaughtList.push(Pikachu);
          const Raichu = {
-            Raichu: pokeList.raichu
+            name: pokeList.raichu
          }
          this.userCaughtList.push(Raichu);
          const Sandshrew = {
-            Sandshrew: pokeList.sandshrew
+            name: pokeList.sandshrew
          }
          this.userCaughtList.push(Sandshrew);
          const Sandslash = {
-            Sandslash: pokeList.sandslash
+            name: pokeList.sandslash
          }
          this.userCaughtList.push(Sandslash);
 
-         const NidoranF = { // undefined
-            NidoranF: pokeList.nidoranF
+         const NidoranF = { 
+            name: pokeList.nidoranF
          }
          this.userCaughtList.push(NidoranF);
 
          const Nidorina = {
-            Nidorina: pokeList.nidorina
+            name: pokeList.nidorina
          }
          this.userCaughtList.push(Nidorina);
          const Nidoqueen = {
-            Nidoqueen: pokeList.nidoqueen
+            name: pokeList.nidoqueen
          }
          this.userCaughtList.push(Nidoqueen);
          const NidoranM = {
-            NidoranM: pokeList.nidoranM
+            name: pokeList.nidoranM
          }
          this.userCaughtList.push(NidoranM);
          const Nidorino = {
-            Nidorino: pokeList.nidorino
+            name: pokeList.nidorino
          }
          this.userCaughtList.push(Nidorino);
          const Nidoking = {
-            Nidoking: pokeList.nidoking
+            name: pokeList.nidoking
          }
          this.userCaughtList.push(Nidoking);
          const Clefairy = {
-            Clefairy: pokeList.clefairy
+            name: pokeList.clefairy
          }
          this.userCaughtList.push(Clefairy);
          const Clefable = {
-            Clefable: pokeList.clefable
+            name: pokeList.clefable
          }
          this.userCaughtList.push(Clefable);
          const Vulpix = {
-            Vulpix: pokeList.vulpix
+            name: pokeList.vulpix
          }
          this.userCaughtList.push(Vulpix);
          const Ninetales = {
-            Ninetales: pokeList.ninetales
+            name: pokeList.ninetales
          }
          this.userCaughtList.push(Ninetales);
          const Jigglypuff = {
-            Jigglypuff: pokeList.jigglypuff
+            name: pokeList.jigglypuff
          }
          this.userCaughtList.push(Jigglypuff);
          const Wigglytuff = {
-            Wigglytuff: pokeList.wigglytuff
+            name: pokeList.wigglytuff
          }
          this.userCaughtList.push(Wigglytuff);
          const Zubat = {
-            Zubat: pokeList.zubat
+            name: pokeList.zubat
          }
          this.userCaughtList.push(Zubat);
          const Golbat = {
-            Golbat: pokeList.golbat
+            name: pokeList.golbat
          }
          this.userCaughtList.push(Golbat);
          const Oddish = {
-            Oddish: pokeList.oddish
+            name: pokeList.oddish
          }
          this.userCaughtList.push(Oddish);
          const Gloom = {
-            Gloom: pokeList.gloom
+            name: pokeList.gloom
          }
          this.userCaughtList.push(Gloom);
          const Vileplume = {
-            Vileplume: pokeList.vileplume
+            name: pokeList.vileplume
          }
          this.userCaughtList.push(Vileplume);
          const Paras = {
-            Paras: pokeList.paras
+            name: pokeList.paras
          }
          this.userCaughtList.push(Paras);
          const Parasect = {
-            Parasect: pokeList.parasect
+            name: pokeList.parasect
          }
          this.userCaughtList.push(Parasect);
          const Venonat = {
-            Venonat: pokeList.venonat
+            name: pokeList.venonat
          }
          this.userCaughtList.push(Venonat);
          const Venomoth = {
-            Venomoth: pokeList.venomoth
+            name: pokeList.venomoth
          }
          this.userCaughtList.push(Venomoth);
          const Diglett = {
-            Diglett: pokeList.diglett
+            name: pokeList.diglett
          }
          this.userCaughtList.push(Diglett);
          const Dugtrio = {
-            Dugtrio: pokeList.dugtrio
+            name: pokeList.dugtrio
          }
          this.userCaughtList.push(Dugtrio);
          const Meowth = {
-            Meowth: pokeList.meowth
+            name: pokeList.meowth
          }
          this.userCaughtList.push(Meowth);
          const Persian = {
-            Persian: pokeList.persian
+            name: pokeList.persian
          }
          this.userCaughtList.push(Persian);
          const Psyduck = {
-            Psyduck: pokeList.psyduck
+            name: pokeList.psyduck
          }
          this.userCaughtList.push(Psyduck);
          const Golduck = {
-            Golduck: pokeList.golduck
+            name: pokeList.golduck
          }
          this.userCaughtList.push(Golduck);
          const Mankey = {
-            Mankey: pokeList.mankey
+            name: pokeList.mankey
          }
          this.userCaughtList.push(Mankey);
          const Primeape = {
-            Primeape: pokeList.primeape
+            name: pokeList.primeape
          }
          this.userCaughtList.push(Primeape);
          const Growlithe = {
-            Growlithe: pokeList.growlithe
+            name: pokeList.growlithe
          }
          this.userCaughtList.push(Growlithe);
          const Arcanine = {
-            Arcanine: pokeList.arcanine
+            name: pokeList.arcanine
          }
          this.userCaughtList.push(Arcanine);
          const Poliwag = {
-            Poliwag: pokeList.poliwag
+            name: pokeList.poliwag
          }
          this.userCaughtList.push(Poliwag);
          const Poliwhirl = {
-            Poliwhirl: pokeList.poliwhirl
+            name: pokeList.poliwhirl
          }
          this.userCaughtList.push(Poliwhirl);
          const Poliwrath = {
-            Poliwrath: pokeList.poliwrath
+            name: pokeList.poliwrath
          }
          this.userCaughtList.push(Poliwrath);
          const Abra = {
-            Abra: pokeList.abra
+            name: pokeList.abra
          }
          this.userCaughtList.push(Abra);
          const Kadabra = {
-            Kadabra: pokeList.kadabra
+            name: pokeList.kadabra
          }
          this.userCaughtList.push(Kadabra);
          const Alakazam = {
-            Alakazam: pokeList.alakazam
+            name: pokeList.alakazam
          }
          this.userCaughtList.push(Alakazam);
          const Machop = {
-            Machop: pokeList.machop
+            name: pokeList.machop
          }
          this.userCaughtList.push(Machop);
          const Machoke = {
-            Machoke: pokeList.machoke
+            name: pokeList.machoke
          }
          this.userCaughtList.push(Machoke);
          const Machamp = {
-            Machamp: pokeList.machamp
+            name: pokeList.machamp
          }
          this.userCaughtList.push(Machamp);
          const Bellsprout = {
-            Bellsprout: pokeList.bellsprout
+            name: pokeList.bellsprout
          }
          this.userCaughtList.push(Bellsprout);
          const Weepinbell = {
-            Weepinbell: pokeList.weepinbell
+            name: pokeList.weepinbell
          }
          this.userCaughtList.push(Weepinbell);
-         const Victreebel = { // undefined
-            Victreebel: pokeList.victreebel
+         const Victreebel = {
+            name: pokeList.victreebel
          }
          this.userCaughtList.push(Victreebel);
          const Tentacool = {
-            Tentacool: pokeList.tentacool
+            name: pokeList.tentacool
          }
          this.userCaughtList.push(Tentacool);
          const Tentacruel = {
-            Tentacruel: pokeList.tentacruel
+            name: pokeList.tentacruel
          }
          this.userCaughtList.push(Tentacruel);
          const Geodude = {
-            Geodude: pokeList.geodude
+            name: pokeList.geodude
          }
          this.userCaughtList.push(Geodude);
          const Graveler = {
-            Graveler: pokeList.graveler
+            name: pokeList.graveler
          }
          this.userCaughtList.push(Graveler);
          const Golem = {
-            Golem: pokeList.golem
+            name: pokeList.golem
          }
          this.userCaughtList.push(Golem);
          const Ponyta = {
-            Ponyta: pokeList.ponyta
+            name: pokeList.ponyta
          }
          this.userCaughtList.push(Ponyta);
          const Rapidash = {
-            Rapidash: pokeList.rapidash
+            name: pokeList.rapidash
          }
          this.userCaughtList.push(Rapidash);
          const Slowpoke = {
-            Slowpoke: pokeList.slowpoke
+            name: pokeList.slowpoke
          }
          this.userCaughtList.push(Slowpoke);
          const Slowbro = {
-            Slowbro: pokeList.slowbro
+            name: pokeList.slowbro
          }
          this.userCaughtList.push(Slowbro);
          const Magnemite = {
-            Magnemite: pokeList.magnemite
+            name: pokeList.magnemite
          }
          this.userCaughtList.push(Magnemite);
          const Magneton = {
-            Magneton: pokeList.magneton
+            name: pokeList.magneton
          }
          this.userCaughtList.push(Magneton);
          const Farfetchd = {
-            Farfetchd: pokeList.farfetchd
+            name: pokeList.farfetchd
          }
          this.userCaughtList.push(Farfetchd);
          const Doduo = {
-            Doduo: pokeList.doduo
+            name: pokeList.doduo
          }
          this.userCaughtList.push(Doduo);
          const Dodrio = {
-            Dodrio: pokeList.dodrio
+            name: pokeList.dodrio
          }
          this.userCaughtList.push(Dodrio);
          const Seel = {
-            Seel: pokeList.seel
+            name: pokeList.seel
          }
          this.userCaughtList.push(Seel);
          const Dewgong = {
-            Dewgong: pokeList.dewgong
+            name: pokeList.dewgong
          }
          this.userCaughtList.push(Dewgong);
          const Grimer = {
-            Grimer: pokeList.grimer
+            name: pokeList.grimer
          }
          this.userCaughtList.push(Grimer);
          const Muk = {
-            Muk: pokeList.muk
+            name: pokeList.muk
          }
          this.userCaughtList.push(Muk);
          const Shellder = {
-            Shellder: pokeList.shellder
+            name: pokeList.shellder
          }
          this.userCaughtList.push(Shellder);
          const Cloyster = {
-            Cloyster: pokeList.cloyster
+            name: pokeList.cloyster
          }
          this.userCaughtList.push(Cloyster);
          const Gastly = {
-            Gastly: pokeList.gastly
+            name: pokeList.gastly
          }
          this.userCaughtList.push(Gastly);
          const Haunter = {
-            Haunter: pokeList.haunter
+            name: pokeList.haunter
          }
          this.userCaughtList.push(Haunter);
          const Gengar = {
-            Gengar: pokeList.gengar
+            name: pokeList.gengar
          }
          this.userCaughtList.push(Gengar);
          const Onix = {
-            Onix: pokeList.onix
+            name: pokeList.onix
          }
          this.userCaughtList.push(Onix);
          const Drowzee = {
-            Drowzee: pokeList.drowzee
+            name: pokeList.drowzee
          }
          this.userCaughtList.push(Drowzee);
          const Hypno = {
-            Hypno: pokeList.hypno
+            name: pokeList.hypno
          }
          this.userCaughtList.push(Hypno);
          const Krabby = {
-            Krabby: pokeList.krabby
+            name: pokeList.krabby
          }
          this.userCaughtList.push(Krabby);
          const Kingler = {
-            Kingler: pokeList.kingler
+            name: pokeList.kingler
          }
          this.userCaughtList.push(Kingler);
          const Voltorb = {
-            Voltorb: pokeList.voltorb
+            name: pokeList.voltorb
          }
          this.userCaughtList.push(Voltorb);
          const Electrode = {
-            Electrode: pokeList.electrode
+            name: pokeList.electrode
          }
          this.userCaughtList.push(Electrode);
          const Exeggcute = {
-            Exeggcute: pokeList.exeggcute
+            name: pokeList.exeggcute
          }
          this.userCaughtList.push(Exeggcute);
          const Exeggutor = {
-            Exeggutor: pokeList.exeggutor
+            name: pokeList.exeggutor
          }
          this.userCaughtList.push(Exeggutor);
          const Cubone = {
-            Cubone: pokeList.cubone
+            name: pokeList.cubone
          }
          this.userCaughtList.push(Cubone);
          const Marowak = {
-            Marowak: pokeList.marowak
+            name: pokeList.marowak
          }
          this.userCaughtList.push(Marowak);
          const Hitmonlee = {
-            Hitmonlee: pokeList.hitmonlee
+            name: pokeList.hitmonlee
          }
          this.userCaughtList.push(Hitmonlee);
          const Hitmonchan = {
-            Hitmonchan: pokeList.hitmonchan
+            name: pokeList.hitmonchan
          }
          this.userCaughtList.push(Hitmonchan);
          const Lickitung = {
-            Lickitung: pokeList.lickitung
+            name: pokeList.lickitung
          }
          this.userCaughtList.push(Lickitung);
          const Koffing = {
-            Koffing: pokeList.koffing
+            name: pokeList.koffing
          }
          this.userCaughtList.push(Koffing);
          const Weezing = {
-            Weezing: pokeList.weezing
+            name: pokeList.weezing
          }
          this.userCaughtList.push(Weezing);
          const Rhyhorn = {
-            Rhyhorn: pokeList.rhyhorn
+            name: pokeList.rhyhorn
          }
          this.userCaughtList.push(Rhyhorn);
          const Rhydon = {
-            Rhydon: pokeList.rhydon
+            name: pokeList.rhydon
          }
          this.userCaughtList.push(Rhydon);
          const Chansey = {
-            Chansey: pokeList.chansey
+            name: pokeList.chansey
          }
          this.userCaughtList.push(Chansey);
          const Tangela = {
-            Tangela: pokeList.tangela
+            name: pokeList.tangela
          }
          this.userCaughtList.push(Tangela);
          const Kangaskhan = {
-            Kangaskhan: pokeList.kangaskhan
+            name: pokeList.kangaskhan
          }
          this.userCaughtList.push(Kangaskhan);
          const Horsea = {
-            Horsea: pokeList.horsea
+            name: pokeList.horsea
          }
          this.userCaughtList.push(Horsea);
          const Seadra = {
-            Seadra: pokeList.seadra
+            name: pokeList.seadra
          }
          this.userCaughtList.push(Seadra);
          const Goldeen = {
-            Goldeen: pokeList.goldeen
+            name: pokeList.goldeen
          }
          this.userCaughtList.push(Goldeen);
          const Seaking = {
-            Seaking: pokeList.seaking
+            name: pokeList.seaking
          }
          this.userCaughtList.push(Seaking);
          const Staryu = {
-            Staryu: pokeList.staryu
+            name: pokeList.staryu
          }
          this.userCaughtList.push(Staryu);
          const Starmie = {
-            Starmie: pokeList.starmie
+            name: pokeList.starmie
          }
          this.userCaughtList.push(Starmie);
-         const MrMime = { // undefined
-            MrMime: pokeList.mrMime
+         const MrMime = { 
+            name: pokeList.mrMime
          }
          this.userCaughtList.push(MrMime);
          const Scyther = {
-            Scyther: pokeList.scyther
+            name: pokeList.scyther
          }
          this.userCaughtList.push(Scyther);
          const Jynx = {
-            Jynx: pokeList.jynx
+            name: pokeList.jynx
          }
          this.userCaughtList.push(Jynx);
          const Electabuzz = {
-            Electabuzz: pokeList.electabuzz
+            name: pokeList.electabuzz
          }
          this.userCaughtList.push(Electabuzz);
          const Magmar = {
-            Magmar: pokeList.magmar
+            name: pokeList.magmar
          }
          this.userCaughtList.push(Magmar);
          const Pinsir = {
-            Pinsir: pokeList.pinsir
+            name: pokeList.pinsir
          }
          this.userCaughtList.push(Pinsir);
          const Tauros = {
-            Tauros: pokeList.tauros
+            name: pokeList.tauros
          }
          this.userCaughtList.push(Tauros);
          const Magikarp = {
-            Magikarp: pokeList.magikarp
+            name: pokeList.magikarp
          }
          this.userCaughtList.push(Magikarp);
          const Gyarados = {
-            Gyarados: pokeList.gyarados
+            name: pokeList.gyarados
          }
          this.userCaughtList.push(Gyarados);
          const Lapras = {
-            Lapras: pokeList.lapras
+            name: pokeList.lapras
          }
          this.userCaughtList.push(Lapras);
          const Ditto = {
-            Ditto: pokeList.ditto
+            name: pokeList.ditto
          }
          this.userCaughtList.push(Ditto);
          const Eevee = {
-            Eevee: pokeList.eevee
+            name: pokeList.eevee
          }
          this.userCaughtList.push(Eevee);
          const Vaporeon = {
-            Vaporeon: pokeList.vaporeon
+            name: pokeList.vaporeon
          }
          this.userCaughtList.push(Vaporeon);
          const Jolteon = {
-            Jolteon: pokeList.jolteon
+            name: pokeList.jolteon
          }
          this.userCaughtList.push(Jolteon);
          const Flareon = {
-            Flareon: pokeList.flareon
+            name: pokeList.flareon
          }
          this.userCaughtList.push(Flareon);
          const Porygon = {
-            Porygon: pokeList.porygon
+            name: pokeList.porygon
          }
          this.userCaughtList.push(Porygon);
          const Omanyte = {
-            Omanyte: pokeList.omanyte
+            name: pokeList.omanyte
          }
          this.userCaughtList.push(Omanyte);
          const Omastar = {
-            Omastar: pokeList.omastar
+            name: pokeList.omastar
          }
          this.userCaughtList.push(Omastar);
          const Kabuto = {
-            Kabuto: pokeList.kabuto
+            name: pokeList.kabuto
          }
          this.userCaughtList.push(Kabuto);
          const Kabutops = {
-            Kabutops: pokeList.kabutops
+            name: pokeList.kabutops
          }
          this.userCaughtList.push(Kabutops);
          const Aerodactyl = {
-            Aerodactyl: pokeList.aerodactyl
+            name: pokeList.aerodactyl
          }
          this.userCaughtList.push(Aerodactyl);
          const Snorlax = {
-            Snorlax: pokeList.snorlax
+            name: pokeList.snorlax
          }
          this.userCaughtList.push(Snorlax);
          const Articuno = {
-            Articuno: pokeList.articuno
+            name: pokeList.articuno
          }
          this.userCaughtList.push(Articuno);
          const Zapdos = {
-            Zapdos: pokeList.zapdos
+            name: pokeList.zapdos
          }
          this.userCaughtList.push(Zapdos);
          const Moltres = {
-            Moltres: pokeList.moltres
+            name: pokeList.moltres
          }
          this.userCaughtList.push(Moltres);
          const Dratini = {
-            Dratini: pokeList.dratini
+            name: pokeList.dratini
          }
          this.userCaughtList.push(Dratini);
          const Dragonair = {
-            Dragonair: pokeList.dragonair
+            name: pokeList.dragonair
          }
          this.userCaughtList.push(Dragonair);
          const Dragonite = {
-            Dragonite: pokeList.dragonite
+            name: pokeList.dragonite
          }
          this.userCaughtList.push(Dragonite);
          const Mewtwo = {
-            Mewtwo: pokeList.mewtwo
+            name: pokeList.mewtwo
          }
          this.userCaughtList.push(Mewtwo);
          const Mew = {
-            Mew: pokeList.mew
+            name: pokeList.mew
          }
          this.userCaughtList.push(Mew);
 
-         console.log(this.userCaughtList);
+         console.log(this.userCaughtList[129].name);
       })
    }
 }

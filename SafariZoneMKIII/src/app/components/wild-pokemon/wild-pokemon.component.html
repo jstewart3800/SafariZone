@@ -16,7 +16,7 @@
             <ion-row class="battleBox">
                <ion-col>
                   <div>
-                     <ion-button color="warning" expand="block"
+                     <ion-button (click)="throwBall()" color="warning" expand="block"
                         class="ion-activatable ripple-parent">
                         <!-- Set to roll random pokemon -->
                         Ball
@@ -24,7 +24,7 @@
                      </ion-button>
                   </div>
                   <div>
-                     <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
+                     <ion-button (click)="throwBait()" color="warning" expand="block" class="ion-activatable ripple-parent">
                         Bait
                         <ion-ripple-effect></ion-ripple-effect>
                      </ion-button>
@@ -32,7 +32,7 @@
                </ion-col>
                <ion-col>
                   <div>
-                     <ion-button color="warning" expand="block" class="ion-activatable ripple-parent">
+                     <ion-button (click)="throwRock()" color="warning" expand="block" class="ion-activatable ripple-parent">
                         Rock
                         <ion-ripple-effect></ion-ripple-effect>
                      </ion-button>

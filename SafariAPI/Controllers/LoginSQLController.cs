@@ -31,8 +31,16 @@ namespace SafariAPI.Controllers
       }
 
       [HttpPost]
-      public int AddUser(UserInfo userToAdd)
+      public bool AddUser(UserInfo userToAdd)
       {
+         List<UserInfo> Info = new List<UserInfo>(_UsersFromSQL.GetUsers());
+         foreach(var item in Info)
+         {
+            if(userToAdd.emailAddress == item.emailAddress)
+            {
+               return false;
+            }
+         }
          // Pass userToAdd to LoginServiceSQL
          return _UsersFromSQL.InsertUser(userToAdd);
       }

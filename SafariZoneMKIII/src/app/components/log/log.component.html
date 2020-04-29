@@ -2,7 +2,7 @@
    <ion-col>
       <ion-list>
          <div *ngFor="let p of logList; index as i">
-            <ion-item *ngIf="userCaughtList[i]; else pokeKnown"> 
+            <ion-item *ngIf="userCaughtList[i]?.name === false; else pokeKnown"> 
                <!-- This ngIf needs to be based on whether the value for each pokemon is true in the db, not in gs -->
                <p slot="start" class='mb-0'>???</p>
                <ion-label>???</ion-label>

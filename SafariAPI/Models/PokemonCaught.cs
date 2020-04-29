@@ -92,7 +92,7 @@ namespace SafariAPI.Models
       public bool Slowbro { get; set; }
       public bool Magnemite { get; set; }
       public bool Magneton { get; set; }
-      public bool Farfetchd { get; set; } // Named Farfetch'd in Google Sheets
+      public bool Farfetchd { get; set; }
       public bool Doduo { get; set; }
       public bool Dodrio { get; set; }
       public bool Seel { get; set; }

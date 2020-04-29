@@ -35,14 +35,14 @@ namespace SafariAPI.Controllers
          return _PokeLogsFromSQL.CreatePokeLog(logToCreate);
       }
 
-     [HttpPost("update")]
-        public bool UpdateLog(PokemonCaught logToUpdate)
-        {
-            return _PokeLogsFromSQL.UpdateLog(logToUpdate);
-        }
+      [HttpPost("update")]
+      public bool UpdateLogByEmail(PokemonCaught logToUpdate)
+      {
+         return _PokeLogsFromSQL.UpdateLogByEmail(logToUpdate);
+      }
 
       [HttpDelete("{id}")]
-        public bool DeleteLog(int id)
+      public bool DeleteLog(int id)
       {
          return _PokeLogsFromSQL.DeleteLog(id);
       }

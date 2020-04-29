@@ -36,14 +36,13 @@ export class LoginPage implements OnInit {
 
       this.submitAttempt = true;
 
-      if (!this.loginForm.valid) { // check db to see if login is valid
+      if (!this.loginForm.valid) {
          alert('invalid login'); // Toast
       } else {
          this.userLoggedIn.userEmail = id;
          this.pService.loggedInUser = this.userLoggedIn;
 
-         console.log('success!'); // user is now logged in
-         console.log(this.loginForm.value);
+         console.log('success!'); // Toast
          this.pService.login(this.loginForm.value);
       }
    }

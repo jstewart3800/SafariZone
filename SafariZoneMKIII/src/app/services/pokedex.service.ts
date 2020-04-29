@@ -30,6 +30,8 @@ export class PokedexService {
 
    private pokedexEntryList: PokedexEntry[] = [];
 
+   public duplicateUser = false;
+
    constructor(private http: HttpClient, private router: Router) {
       this.getPokemon();
    }
@@ -82,10 +84,15 @@ export class PokedexService {
    }
 
    signUp(credentials) {
-      this.http.post(this.createUserUrl, credentials).subscribe(u => {
-         this.token = u;
-         this.token = this.token.token;
-         console.log(this.token);
+      this.http.post(this.createUserUrl, credentials).subscribe(check => {
+         if(check === false){
+            alert("That email address already has an account.") // Toast
+            this.duplicateUser = true;
+         } else{
+            this.token = check;
+            this.token = this.token.token;
+            console.log(this.token);
+         }
       })
    }
 
