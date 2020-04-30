@@ -86,7 +86,6 @@ export class PokedexService {
    signUp(credentials) {
       this.http.post(this.createUserUrl, credentials).subscribe(check => {
          if(check === false){
-            alert("That email address already has an account.") // Toast
             this.duplicateUser = true;
          } else{
             this.token = check;

@@ -1,13 +1,19 @@
 <div *ngIf="wildAppeared === true; else wildButton">
    <ion-row>
+      <ion-col></ion-col>
       <ion-col class="pb-0 ">
-         <img class="ion-float-right spriteStyle" src="assets/wildSprites/{{wildPokemon.dexNum}}.png" alt="Pikachu">
-         <!-- Still runs too quickly -->
+         <img class="wildSpriteStyle {{animName}}" src="assets/wildSprites/{{wildPokemon.dexNum}}.png" alt="Pikachu">
       </ion-col>
    </ion-row>
+   <!-- <ion-row>
+      <ion-col class="p-0"></ion-col>
+      <ion-col class="p-0">
+         <p class="ion-text-center m-0 namePlate">{{wildPokemon.pokemon}}</p>
+      </ion-col>
+   </ion-row> -->
    <ion-row>
       <ion-col class="p-0">
-         <img class="ion-float-left spriteStyle" src="assets/trainerBack.png" alt="Trainer">
+         <img class="ion-float-left trainerSpriteStyle" src="assets/trainerBack.png" alt="Trainer">
       </ion-col>
    </ion-row>
    <ion-row>
@@ -16,15 +22,14 @@
             <ion-row class="battleBox">
                <ion-col>
                   <div>
-                     <ion-button (click)="throwBall()" color="warning" expand="block"
+                     <ion-button (click)="throwBall()" disabled="{{pokeTurn}}" color="warning" expand="block"
                         class="ion-activatable ripple-parent">
-                        <!-- Set to roll random pokemon -->
                         Ball
                         <ion-ripple-effect></ion-ripple-effect>
                      </ion-button>
                   </div>
                   <div>
-                     <ion-button (click)="throwBait()" color="warning" expand="block" class="ion-activatable ripple-parent">
+                     <ion-button (click)="throwBait()" disabled="{{pokeTurn}}" color="warning" expand="block" class="ion-activatable ripple-parent">
                         Bait
                         <ion-ripple-effect></ion-ripple-effect>
                      </ion-button>
@@ -32,13 +37,13 @@
                </ion-col>
                <ion-col>
                   <div>
-                     <ion-button (click)="throwRock()" color="warning" expand="block" class="ion-activatable ripple-parent">
+                     <ion-button (click)="throwRock()" disabled="{{pokeTurn}}" color="warning" expand="block" class="ion-activatable ripple-parent">
                         Rock
                         <ion-ripple-effect></ion-ripple-effect>
                      </ion-button>
                   </div>
                   <div>
-                     <ion-button (click)="runAway()" color="warning" expand="block" class="ion-activatable ripple-parent">
+                     <ion-button (click)="runAway()" disabled="{{pokeTurn}}" color="warning" expand="block" class="ion-activatable ripple-parent">
                         Run
                         <ion-ripple-effect></ion-ripple-effect>
                      </ion-button>

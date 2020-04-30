@@ -5,7 +5,6 @@ import { PokedexEntry } from 'src/app/interfaces/pokedex-entry';
 import { ModalController } from '@ionic/angular';
 import { ModalComponent } from './modal/modal.component';
 import { HttpClient } from '@angular/common/http';
-import { CaughtLog } from 'src/app/interfaces/caught-log';
 
 @Component({
    selector: 'app-log',

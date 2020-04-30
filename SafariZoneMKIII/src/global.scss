@@ -25,6 +25,9 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@import "assets/styles/wickedcss.min.css";
+@import "assets/styles/animate.css";
+
 @font-face{
    font-family: pokemonSolid;
    src: url(assets/font/PokemonSolid.ttf);
@@ -32,6 +35,10 @@
 
 .pokemonSolid{
    font-family: pokemonSolid;
+}
+
+.no-scroll .scroll-content{
+   overflow: hidden;
 }
 
 .centerStage {

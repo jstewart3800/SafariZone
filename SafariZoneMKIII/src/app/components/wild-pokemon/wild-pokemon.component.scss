@@ -1,12 +1,23 @@
-.spriteStyle{
-     width: 50%;
-     height: auto;
+.wildSpriteStyle{
+   width: 100%;
+   height: auto;
+}
+
+.trainerSpriteStyle{
+   width: 50%;
+   height: auto;
 }
 
 .battleBox{
-     border: darkgray 2px dashed;
-     border-radius: 5px;
-     background-color: #0E525C;
-     margin-right: .5px;
-     margin-left: .5px;
+   border: darkgray 2px dashed;
+   border-radius: 5px;
+   background-color: #0E525C;
+   margin-right: .5px;
+   margin-left: .5px;
+}
+
+.namePlate{
+   background-color: #0E525C;
+   border-radius: 5px;
+   color: #ffc409
 }
